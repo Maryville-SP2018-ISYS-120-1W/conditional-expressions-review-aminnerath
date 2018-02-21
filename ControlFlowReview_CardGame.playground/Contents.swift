@@ -21,16 +21,33 @@ func takeTurn( firstPlayerCard:Card, secondPlayerCard:Card ) {
     
     
     if firstPlayerCard.cardValue > secondPlayerCard.cardValue  {
-        firstPlayerPoints += 1
+        firstPlayerPoints += 5
         print( "Player 1 had a \(firstPlayerCard)" )
     }
     
     
     
-    
+else if secondPlayerCard.cardValue>firstPlayerCard.cardValue{
+   secondPlayer+=5
+   print(Player 2 had a |(firstPlayerCard)"
+         
 /* --- END YOUR GAME CONDITIONS --- */
     
-}
+}else {
+      firstPlayerPoints-=10;
+      secondPlayerPoints -= 10;
+      print ("cards were the same.")
+   }
+   if firstPlayerCard.isRedCard && firstPlayerCard.cardValue %2==1 {
+      firstPlayerPoints+=20 
+   }
+   if !secondPlayerCard.isRedCard && secondPlayerCard.cardValue> 10 && secondPlayerCard.cardValue<14 {
+      secondPlayerPoints += 20 
+   }
+   if firstPlayerCard.cardValue==10 && secondPlayerCard.suitLabel=="❤️" {
+      let half = firstPlayerPoints / 2
+      secondPlayerPoints += half
+   
 
 // Function that starts and plays the game
 func playGame() {
@@ -49,8 +66,14 @@ func playGame() {
     
     print( "Player 1 Score: \(firstPlayerPoints)")
     print( "Player 2 Score: \(secondPlayerPoints)")
-    
-    print( "The winner is: ???")
+    if firstPlayerPoints> secondPlayerPoints {
+       print ("the winner is Player 1")
+       esle if secondPlayerPoints>firstPlayerPoints {
+          print ("the winner is Player 2")
+       }
+       else{
+          Print("the game is a draw")
+   
 
     
     
